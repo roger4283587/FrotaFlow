@@ -1,0 +1,216 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(79, 79, 79));
+    background-image: url(/images/wallpaper2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Header Vertical */
+header{
+  position: fixed; 
+  left: 0;
+  width: 220px; 
+  height: 100vh; 
+  color: white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  border-right: 3px solid black;
+  background-image: url(/images/wallpaper3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+header .funcoes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+header .funcoes ul li a {
+  color: white; 
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+}
+
+header .funcoes ul li  :hover {
+    background-color:  #cccccc;
+}
+
+header .login ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+header .login ul li a {
+  color: white; 
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+}
+
+header .login ul li  :hover {
+    background-color:  #cccccc;
+}
+
+.item-login{
+    margin-bottom: 40px;
+}
+
+.logo{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.logo a{
+    color: white; 
+    text-decoration: none;
+}
+
+
+/* ///////////////////////// */
+
+/* Main  */
+main {
+  margin-left: 225px; 
+  padding: 20px;
+  display: grid;
+}
+
+main h1{
+    text-align: center;
+    color: white;
+}
+
+.header2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-header2{
+    color: white;
+    display: block;
+}
+
+
+/* //////////////////////// */
+
+.categorias{
+    display: grid;
+    background: linear-gradient(45deg, rgb(44, 44, 44), rgb(42, 41, 41));
+    margin-top: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0.5px solid black; 
+    color: white;
+}
+
+#container-botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 10px;
+    justify-content: end;
+}
+
+#cards{
+    display: grid;
+    margin: 10px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: 290px;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+.botoes-card {
+    display: flex;  
+    flex-direction: row;
+    gap: 10px;
+}
+
+#nova-categoria {
+    background-color: green;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+}
+
+#nova-categoria:hover{
+    background-color: rgb(2, 199, 2);
+}
+
+#voltar {
+    background-color: gray;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+}
+
+#voltar:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+.editar {
+    background-color: yellow;
+    width: 60px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+}
+
+.editar:hover{
+    background-color: rgb(208, 208, 66);
+}
+
+.excluir {
+    background-color: red;
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+}
+
+.excluir:hover{
+    background-color: rgb(245, 72, 72);
+}
+
+

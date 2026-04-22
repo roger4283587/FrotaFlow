@@ -1,0 +1,245 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(79, 79, 79));
+    background-image: url(/images/wallpaper2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Header Vertical */
+header{
+  position: fixed; 
+  left: 0;
+  width: 220px; 
+  height: 100vh; 
+  color: white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  border-right: 3px solid black;
+  background-image: url(/images/wallpaper3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+header .funcoes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+header .funcoes ul li a {
+  color: white; 
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+}
+
+header .funcoes ul li  :hover {
+    background-color:  #cccccc;
+}
+
+header .login ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+header .login ul li a {
+  color: white; 
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+}
+
+header .login ul li  :hover {
+    background-color:  #cccccc;
+}
+
+.item-login{
+    margin-bottom: 40px;
+}
+
+.logo{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.logo a{
+    color: white; 
+    text-decoration: none;
+}
+
+
+/* ///////////////////////// */
+
+/* Main  */
+main {
+  margin-left: 225px; 
+  padding: 20px;
+  display: grid;
+}
+
+main h1{
+    text-align: center;
+    color: white;
+}
+
+.header2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-header2{
+    color: white;
+    display: block;
+}
+
+
+/* //////////////////////// */
+
+/* Filtrar informações */
+
+.info-container{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: linear-gradient(45deg, rgb(44, 44, 44), rgb(42, 41, 41));
+    height: 100px;
+    align-items: center;
+    border-radius: 10px;
+    border: 0.5px solid black; 
+}
+
+.info-container .itens-info p{
+    color: white;
+}
+
+#placa{
+    margin-left: 20px;
+}
+
+.container-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#botao-filtrar, #botao-ordem{
+    margin-top: 17.5px;
+}
+
+
+#botao-filtrar button{
+    background-color: green;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#botao-filtrar button:hover{
+    background-color: rgb(2, 199, 2);
+}
+
+#botao-ordem button{
+    background-color: blue;
+    width: 100px;
+    height: 30px;
+    color: white; 
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#botao-ordem button:hover{
+    background-color: rgb(115, 115, 252);
+}
+
+#botao-ordem{
+    margin-right: 35px;
+}
+
+/* //////////////////////// */
+
+/* Tabela */
+
+.tabela{
+    margin-top: 30px;
+}
+
+.tabela table{
+    border-collapse: collapse;
+    width: 100%;
+    align-content: center;
+}
+
+.tabela th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+.tabela td {
+    background-color: white;
+}
+
+.editar{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.editar:hover{
+    background-color: rgb(189, 189, 39);
+}
+
+.excluir{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.excluir:hover{
+    background-color: rgb(179, 56, 56);
+}
+
+.ver{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.ver:hover{
+    background-color: rgb(115, 115, 252);
+}
+
+.tabela th{
+    background-color: #f2f2f2;
+}
+
+/* ////////////////////////// */
