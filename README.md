@@ -36,40 +36,6 @@ O FrotaFlow é um sistema web desenvolvido com o objetivo de simplificar a gest�
 - CSS3
 - Bootstrap Icons
 
-## Estrutura do Projeto
-
-FrotaFlow/
-├── index.html
-├── pages/
-│   ├── landing_page.html
-│   ├── login.html
-│   ├── cadastro_usuario.html
-│   ├── cadastro_onibus.html
-│   ├── novoonibus.html
-│   ├── onibus_editar.html
-│   ├── almoxarifado.html
-│   ├── categoria.html
-│   ├── novacategoria.html
-│   ├── novoitem.html
-│   ├── novaordem.html
-│   └── manutencao_editar.html
-├── style/
-│   ├── style.css
-│   ├── style_almoxarifado.css
-│   ├── style_cadastro_onibus.css
-│   ├── style_cadastro_usuario.css
-│   ├── style_categoria.css
-│   ├── style_landing_page.css
-│   ├── style_login.css
-│   ├── style_novacategoria.css
-│   ├── style_novoitem.css
-│   ├── style_novoonibus.css
-│   └── style_novaordem.css
-└── images/
-    ├── 3540174.jpg
-    ├── apresentacao.gif
-    ├── bus.png
-    └── All About Buses...mp4
 
 ## Navegação
 
