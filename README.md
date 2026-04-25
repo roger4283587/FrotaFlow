@@ -90,8 +90,3 @@ O FrotaFlow é um sistema web desenvolvido com o objetivo de simplificar a gest�
 ## Observações
 
 Este projeto encontra-se em fase de desenvolvimento e tem como foco servir como base para evolução futura com integração backend e funcionalidades completas.
-
-
-
-
-1231
