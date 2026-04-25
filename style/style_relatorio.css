@@ -172,6 +172,30 @@ main h1{
     justify-content: space-between;
 }
 
+/*Seleção de opções*/
+select{
+    border-radius: 0;
+    border: 0cap;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+/*Botão filtrar*/
+.filtro{
+    padding-left: 80px;
+    background-color: green;
+}
+
+.btn-filtrar {
+  flex: 1;             /* Isso faz o botão ocupar todo o espaço disponível */
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
 #botao-filtrar, #botao-ordem{
     margin-top: 17.5px;
 }
