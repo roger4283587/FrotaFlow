@@ -122,9 +122,10 @@ main h1{
     flex-direction: row;
     gap: 20px;
     background: linear-gradient(45deg, rgb(44, 44, 44), rgb(42, 41, 41));
-    height: 100px;
+    height: 45px;
     align-items: center;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border: 0.5px solid black;
     padding: 10px 20px; 
 }
@@ -186,14 +187,93 @@ select{
     background-color: green;
 }
 
-.btn-filtrar {
-  flex: 1;             /* Isso faz o botão ocupar todo o espaço disponível */
-  background-color: green;
+.botao_filtrar {
+    flex: 1;             /* Isso faz o botão ocupar todo o espaço disponível */
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: rgb(57, 57, 57);
+    align-items: top;
+    border: 0.5px solid black;
+    padding: 10px;
+}
+
+.manutencao {
+    background-color: rgba(254, 175, 29, 0.548);
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.concluido {
+    background-color: rgba(0, 127, 0, 0.548);
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.aguardando {
+    background-color: rgba(241, 203, 13, 0.548);
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.pendente {
+    background-color: rgba(127, 0, 0, 0.548);
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.exportar {
+    background-color: rgba(255, 255, 255, 0.29);
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.link_pdf {
+  text-decoration: none;
   color: white;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  text-align: center;
+}
+
+.grafico_coluna {
+    background: rgb(57, 57, 57);
+    align-items: top;
+    border: 0.5px solid black;
+    padding-left: 10px; 
+    padding-top: 10px;
+    height: 235px;
 }
 
 #botao-filtrar, #botao-ordem{
