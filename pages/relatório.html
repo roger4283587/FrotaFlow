@@ -87,7 +87,7 @@
         
         <div class="header2">
             <div class="item-header2">
-                <p>Relatório
+                <p>Relatório (Veículos)
                 </p>
             </div>
             <div class="item-header2">
@@ -132,14 +132,89 @@
                 </div>
 
             <div class="item-placa">
-                <button class="btn-filtrar">Filtrar</button>
+                <button class="botao_filtrar">Filtrar</button>
             </div>
         </div>
 
         <div class="status">
-            
+            <div class="manutencao">
+                <p>Em Manutenção: 5</p>
+            </div>
+
+            <div class="concluido">
+                <p>Concluídos: 8</p>
+            </div>
+
+            <div class="aguardando">
+                <p>Aguardando Peças: 2</p>
+            </div>
+
+            <div class="pendente">
+                <p>Pendentes: 1</p>
+            </div>
+
+            <div class="exportar">
+                <p>Exportar | <a class="link_pdf" href="arquivo.pdf" download="relatorio.pdf">PDF</a></p>
+            </div>
         </div>
+
+        <div class="grafico_coluna">
+                <canvas id="meuGrafico"></canvas>
+            </div>
+
     </main>  
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const canvas = document.getElementById('meuGrafico');
+
+new Chart(canvas, {
+    type: 'bar',
+    data: {
+        labels: ['Em Manutenção', 'Concluídos', 'Aguardando Peças', 'Pendentes'],
+        datasets: [{
+            label: 'Manutenções por Status',
+            data: [5, 8, 2, 1],
+            backgroundColor: ['red', 'green', 'blue', 'yellow']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                labels: {
+                    boxWidth: 0,
+                    boxHeight: 0,
+                    color: '#ffffff'
+                }
+            },
+            title: {
+                display: true,
+                text: 'Número de Manutenções por Status',
+                color: '#ffffff'
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#ffffff' // legenda eixo X
+                },
+                grid: {
+                    color: '#444444'
+                }
+            },
+            y: {
+                ticks: {
+                    color: '#ffffff' // legenda eixo Y
+                },
+                grid: {
+                    color: '#444444'
+                }
+            }
+        }
+    }
+});
+
+</script>
 </body>
 </html>
