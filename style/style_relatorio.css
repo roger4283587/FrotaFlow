@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -127,7 +128,7 @@ main h1{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 0.5px solid black;
-    padding: 10px 20px; 
+    padding: 30px 30px; 
 }
 
 .periodo{
@@ -164,6 +165,9 @@ main h1{
     
 }
 
+.div_filtro :hover {
+    background-color:  #166d00;
+}
 
 
 .container-button{
@@ -175,42 +179,61 @@ main h1{
 
 /*Seleção de opções*/
 select{
-    border-radius: 0;
     border: 0cap;
     padding-left: 5px;
     cursor: pointer;
+    height: 20px;
 }
 
 /*Botão filtrar*/
-.filtro{
-    padding-left: 80px;
-    background-color: green;
-}
-
 .botao_filtrar {
-    flex: 1;             /* Isso faz o botão ocupar todo o espaço disponível */
-    background-color: green;
+    background: linear-gradient(45deg, rgb(68, 175, 19), rgb(11, 130, 0));
     color: white;
     border: none;
     padding: 8px;
     cursor: pointer;
     text-align: center;
+    font-size: large;
+    border-radius: 5px;
 }
+
+
 
 .status {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction:column;
+    gap: 30px;
     background: rgb(57, 57, 57);
     align-items: top;
     border: 0.5px solid black;
     padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
+
+.item-status{
+    display: flex;
+    flex-direction: row;
+}
+
+#status-grafico{
+    background: rgb(61, 61, 61);
+    display:flex;
+    justify-content: space-around;
+}
+
+#status-botao{
+    justify-content: space-evenly; 
+    width: 100%;  
+}
+
+
 .manutencao {
-    background-color: rgba(254, 175, 29, 0.548);
+    background: linear-gradient(45deg, rgb(199, 136, 18), rgb(171, 111, 0));
     height: 40px;        
-    display: flex;        
+    display: flex;    
+    flex-direction: row;    
     align-items: center;   
     justify-content: center;
     color: #ffffff;
@@ -219,9 +242,10 @@ select{
 }
 
 .concluido {
-    background-color: rgba(0, 127, 0, 0.548);
+    background: linear-gradient(45deg, rgb(68, 175, 19), rgb(11, 130, 0));
     height: 40px;        
-    display: flex;        
+    display: flex;      
+    flex-direction: row;  
     align-items: center;   
     justify-content: center;
     color: #ffffff;
@@ -230,7 +254,7 @@ select{
 }
 
 .aguardando {
-    background-color: rgba(241, 203, 13, 0.548);
+    background: linear-gradient(45deg, rgb(187, 190, 17), rgb(167, 163, 26));
     height: 40px;        
     display: flex;        
     align-items: center;   
@@ -241,7 +265,7 @@ select{
 }
 
 .pendente {
-    background-color: rgba(127, 0, 0, 0.548);
+    background: linear-gradient(45deg, rgb(194, 34, 34), rgb(130, 9, 9));
     height: 40px;        
     display: flex;        
     align-items: center;   
@@ -252,7 +276,7 @@ select{
 }
 
 .exportar {
-    background-color: rgba(255, 255, 255, 0.29);
+    background: linear-gradient(45deg, rgb(100, 100, 100), rgb(69, 69, 69));
     height: 40px;        
     display: flex;        
     align-items: center;   
@@ -267,13 +291,23 @@ select{
   color: white;
 }
 
-.grafico_coluna {
-    background: rgb(57, 57, 57);
-    align-items: top;
-    border: 0.5px solid black;
-    padding-left: 10px; 
-    padding-top: 10px;
-    height: 235px;
+.grafico_barra {
+    height: 300px;
+    width: 500px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    justify-content: center;
+}
+
+.grafico_pizza {
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 2px solid rgb(53, 53, 53); 
+    padding-left: 25px;
 }
 
 #botao-filtrar, #botao-ordem{
