@@ -131,52 +131,63 @@
                     </select>
                 </div>
 
-            <div class="item-placa">
+            <div class="div_filtro">
                 <button class="botao_filtrar">Filtrar</button>
             </div>
         </div>
 
+
+
         <div class="status">
-            <div class="manutencao">
-                <p>Em Manutenção: 5</p>
+            <div class="item-status" id="status-botao">
+                <div class="manutencao">
+                    <p>Em Manutenção: 5</p>
+                </div>
+
+                <div class="concluido">
+                    <p>Concluídos: 8</p>
+                </div>
+
+                <div class="aguardando">
+                    <p>Aguardando Peças: 2</p>
+                </div>
+
+                <div class="pendente">
+                    <p>Pendentes: 1</p>
+                </div>
+
+                <div class="exportar">
+                    <p>Exportar | <a class="link_pdf" href="arquivo.pdf" download="relatorio.pdf">PDF</a></p>
+                </div>
             </div>
 
-            <div class="concluido">
-                <p>Concluídos: 8</p>
-            </div>
 
-            <div class="aguardando">
-                <p>Aguardando Peças: 2</p>
-            </div>
+            <div class="item-status" id="status-grafico">
+                <div class="grafico_barra">
+                        <canvas id="grafico_barra"></canvas>
+                </div>
 
-            <div class="pendente">
-                <p>Pendentes: 1</p>
-            </div>
-
-            <div class="exportar">
-                <p>Exportar | <a class="link_pdf" href="arquivo.pdf" download="relatorio.pdf">PDF</a></p>
+                <div class="grafico_pizza">
+                    <canvas id="grafico_pizza"></canvas>
+                </div>
             </div>
         </div>
-
-        <div class="grafico_coluna">
-                <canvas id="meuGrafico"></canvas>
-            </div>
 
     </main>  
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-const canvas = document.getElementById('meuGrafico');
+const canvasBar = document.getElementById('grafico_barra');
 
-new Chart(canvas, {
+new Chart(canvasBar, {
     type: 'bar',
     data: {
         labels: ['Em Manutenção', 'Concluídos', 'Aguardando Peças', 'Pendentes'],
         datasets: [{
             label: 'Manutenções por Status',
             data: [5, 8, 2, 1],
-            backgroundColor: ['red', 'green', 'blue', 'yellow']
+            backgroundColor: ['orange', 'green', 'yellow', 'red']
         }]
     },
     options: {
@@ -197,7 +208,7 @@ new Chart(canvas, {
         scales: {
             x: {
                 ticks: {
-                    color: '#ffffff' // legenda eixo X
+                    color: '#ffffff' 
                 },
                 grid: {
                     color: '#444444'
@@ -205,10 +216,38 @@ new Chart(canvas, {
             },
             y: {
                 ticks: {
-                    color: '#ffffff' // legenda eixo Y
+                    color: '#ffffff'
                 },
                 grid: {
                     color: '#444444'
+                }
+            }
+        }
+    }
+});
+
+
+
+const canvasPie = document.getElementById('grafico_pizza');
+
+new Chart(canvasPie, {
+    type: 'pie',
+    data: {
+        labels: ['Em Manutenção', 'Concluídos', 'Aguardando Peças', 'Pendentes'],
+        datasets: [{
+            label: 'Manutenções por Status',
+            data: [5, 8, 2, 1],
+            backgroundColor: ['orange', 'green', 'yellow', 'red']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: 'top',  
+                align: 'center',      
+                labels: {
+                    color: '#ffffff',
+                    boxWidth: 20,
                 }
             }
         }
