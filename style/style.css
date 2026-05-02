@@ -326,7 +326,6 @@ main h1{
 /* Filtrar informações (relatório */
 
 
-
 .periodo{
     display: flex;
     flex-direction: row;
@@ -716,4 +715,79 @@ select{
 
 #categoria, #nome_item, #descricao, #atual, #minimo {
     font-size: 12.5px;
+}
+
+/* Categoria */
+
+.categorias{
+    display: grid;
+    background-color: #0B2545;
+    margin-top: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5); 
+}
+
+#container-botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 10px;
+    justify-content: end;
+}
+
+#cards{
+    display: grid;
+    margin: 10px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #1C5FA8;
+    width: 290px;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+.botoes-card {
+    display: flex;  
+    flex-direction: row;
+    gap: 10px;
+}
+
+#nova-categoria {
+    background-color: #27A69A;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#nova-categoria:hover{
+    background-color: #1e776e;
+}
+
+#voltar {
+    background-color: #E8A320;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12.5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#voltar:hover{
+    background-color: #a1731d;
 }
