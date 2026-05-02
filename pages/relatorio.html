@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="../index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
                             <path d="M16 4.5a4.5 4.5 0 0 1-1.703 3.526L13 5l2.959-1.11q.04.3.041.61"/>
                             <path d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.5 4.5 0 0 0 11.5 9m-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376M3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
@@ -86,7 +86,7 @@
     <main>
         <div class="header2">
             <div class="item-header2">
-                <p>Ordem de Manutenção</p>
+                <p>Relatório (Veiculos)</p>
             </div>
             <div class="item-header2">
                 <div class="buttons">
@@ -111,67 +111,164 @@
         </div>
 
         <div class="info-container">
-            <div class="itens-info" id="placa">
-                <p>Placa:</p>
-                <input type="text">
-            </div>
-            <div class="itens-info" id="status" >
-                <p>Status: </p>
-                <input type="text">
-            </div>
-            <div class="container-button">
-                <div class="itens-info" id="botao-filtrar">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg>
-                        &nbsp;Filtrar
-                    </button>
+            <div class="periodo">
+                <p>Periodo:</p>
+                <input type="date" value="24/04/2026" >
+                <hr>
+                <input type="date" value="24/04/2026" >
+            </div> 
+            
+
+                <div class="item-placa">
+                    <label for="placas">Placa:</label>
+                    <select id="placas" name="placas">
+                        <option value="todas">Todas</option>
+                        <option value="abc1234">JKL-3456</option>
+                        <option value="xyz5678">GHI-9012</option>
+                    </select>
                 </div>
-                <div class="itens-info" id="botao-ordem">
-                    <a href="/pages/novaordem.html"><button>Nova Ordem</button></a>
+
+
+                <div class="item-placa">
+                    <label for="placas">Mecânicos:</label>
+                    <select id="placas" name="placas">
+                        <option value="todas">Todos</option>
+                        <option value="abc1234">Roberto</option>
+                        <option value="xyz5678">Fabio</option>
+                        <option value="xyz5678">Mario</option>
+                        <option value="xyz5678">Willian</option>
+                    </select>
                 </div>
-            </div>     
+
+            <div class="filtro-relatorio" id="botao-filtrar">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    &nbsp;Filtrar
+                </button>
+            </div>
         </div>
 
-        <div class="tabela">
-            <table>
-                <tr>
-                    <th>Ordem</th>
-                    <th>Placa</th>
-                    <th>Modelo</th>
-                    <th>Problema</th>
-                    <th>Status</th>
-                    <th>Mecânico</th>
-                    <th>Data</th>
-                    <th>Ações</th>
-                </tr>
 
-                <tr>
-                    <td>#1019</td>
-                    <td>DEF-5678</td>
-                    <td>O500</td>
-                    <td>Troca de pneus traseiros</td>
-                    <td> Concluído </td>
-                    <td>Roberto Santos</td>
-                    <td>20/04/2024</td>
-                    <td><a href="/pages/novaordem.html"><button class="ver"> Ver </button></a> <a href="/pages/manutencao_editar.html"><button class="editar"> Editar</button></a> <button class="excluir">Excluir</button></td>
-                </tr>
 
-                <tr>
-                    <td>#1019</td>
-                    <td>DEF-5678</td>
-                    <td>O500</td>
-                    <td>Troca de pneus traseiros</td>
-                    <td> Concluído </td>
-                    <td>Roberto Santos</td>
-                    <td>20/04/2024</td>
-                    <td><a href="/pages/novaordem.html"><button class="ver"> Ver </button></a> <a href="/pages/manutencao_editar.html"><button class="editar"> Editar</button></a> <button class="excluir">Excluir</button></td>
-                </tr>
-            </table>
+        <div class="status">
+            <div class="item-status" id="status-botao">
+                <div class="manutencao">
+                    <p>Em Manutenção: 5</p>
+                </div>
+
+                <div class="concluido">
+                    <p>Concluídos: 8</p>
+                </div>
+
+                <div class="aguardando">
+                    <p>Aguardando Peças: 2</p>
+                </div>
+
+                <div class="pendente">
+                    <p>Pendentes: 1</p>
+                </div>
+
+                <div class="exportar">
+                    <p>Exportar | <a class="link_pdf" href="arquivo.pdf" download="relatorio.pdf">PDF</a></p>
+                </div>
+            </div>
+
+
+            <div class="item-status" id="status-grafico">
+                <div class="grafico_barra">
+                        <canvas id="grafico_barra"></canvas>
+                </div>
+
+                <div class="grafico_pizza">
+                    <canvas id="grafico_pizza"></canvas>
+                </div>
+            </div>
         </div>
+
     </main>
-    <script src="/script/script.js"></script>  
+<script src="/script/script.js"></script>   
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const canvasBar = document.getElementById('grafico_barra');
+
+new Chart(canvasBar, {
+    type: 'bar',
+    data: {
+        labels: ['Em Manutenção', 'Concluídos', 'Aguardando Peças', 'Pendentes'],
+        datasets: [{
+            label: 'Manutenções por Status',
+            data: [5, 8, 2, 1],
+            backgroundColor: ['#E8A320', '#27A69A', '#3A9BD5', '#ef5454']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                labels: {
+                    boxWidth: 0,
+                    boxHeight: 0,
+                    color: '#ffffff'
+                }
+            },
+            title: {
+                display: true,
+                text: 'Número de Manutenções por Status',
+                color: '#ffffff'
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#ffffff' 
+                },
+                grid: {
+                    color: '#444444'
+                }
+            },
+            y: {
+                ticks: {
+                    color: '#ffffff'
+                },
+                grid: {
+                    color: '#444444'
+                }
+            }
+        }
+    }
+});
+
+
+
+const canvasPie = document.getElementById('grafico_pizza');
+
+new Chart(canvasPie, {
+    type: 'pie',
+    data: {
+        labels: ['Em Manutenção', 'Concluídos', 'Aguardando Peças', 'Pendentes'],
+        datasets: [{
+            label: 'Manutenções por Status',
+            data: [5, 8, 2, 1],
+            backgroundColor: ['#E8A320', '#27A69A', '#3A9BD5', '#ef5454']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: 'top',  
+                align: 'center',      
+                labels: {
+                    color: '#ffffff',
+                    boxWidth: 20,
+                }
+            }
+        }
+    }
+});
+
+</script>
 </body>
 </html>
