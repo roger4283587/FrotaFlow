@@ -1,31 +1,44 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(79, 79, 79));
-    background-image: url(/images/wallpaper2.jpg);
+     /* cores de fundo */
+    --bg-grey-light: #F4F7FB;
+    --bg-white: #F4F7FB;
+    --bg-blue-dark: #142136;
+    --bg-indigo: #6366f1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    background-color: var(--bg-grey-light);
+}
+
+.dark {
+  --text-white: #e6e6e6;
+  --text-dark: #ffffff;
+  --bg-grey-light: #1E1E1E;
+  --bg-white: #22395d;
+  --bg-blue-dark: #142136;
+  --bg-indigo: #0B2545;
 }
 
 /* Header Vertical */
 header{
   position: fixed; 
   left: 0;
-  width: 220px; 
+  width: 230px; 
   height: 100vh; 
   color: white;
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  border-right: 3px solid black;
-  background-image: url(/images/wallpaper3.jpg);
+  background-color: #0B2545;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -49,7 +62,7 @@ header .funcoes ul li a {
 }
 
 header .funcoes ul li  :hover {
-    background-color:  #cccccc;
+    background-color:  #3A9BD5;
 }
 
 header .login ul {
@@ -68,7 +81,7 @@ header .login ul li a {
 }
 
 header .login ul li  :hover {
-    background-color:  #cccccc;
+    background-color:  #3A9BD5;
 }
 
 .item-login{
@@ -104,13 +117,35 @@ main h1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .item-header2{
-    color: white;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    color: var(--text-dark);
+    gap: 40px;
+    align-items: center;
 }
 
+.item-header2 p{
+    text-shadow: 5px rgba(0,0,0,0.5); 
+}
+
+.buttons .button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--bg-indigo);
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
 
 /* //////////////////////// */
 
@@ -121,20 +156,19 @@ main h1{
     display: flex;
     flex-direction: row;
     gap: 20px;
-    background: linear-gradient(45deg, rgb(44, 44, 44), rgb(42, 41, 41));
+    background-color: #0B2545;
     height: 100px;
     align-items: center;
     border-radius: 10px;
-    border: 0.5px solid black; 
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5); 
+    padding: 20px 20px;
 }
 
 .info-container .itens-info p{
     color: white;
 }
 
-#placa{
-    margin-left: 20px;
-}
+
 
 .container-button{
     width: 100%;
@@ -143,40 +177,49 @@ main h1{
     justify-content: space-between;
 }
 
-#botao-filtrar, #botao-ordem{
+#botao-filtrar{
     margin-top: 17.5px;
+}
+
+.filtro-relatorio{
+    margin-bottom: 20px;
 }
 
 
 #botao-filtrar button{
-    background-color: green;
+    background-color: #1c5fa8;
     width: 100px;
     height: 30px;
     color: white;
     font-weight: bold;
     font-size: 17px;
     border-radius: 5px;
+    border: none;
 }
 
 #botao-filtrar button:hover{
-    background-color: rgb(2, 199, 2);
+    background-color: #2577ce;
 }
 
 #botao-ordem button{
-    background-color: blue;
+    background-color: #27A69A;
     width: 100px;
     height: 30px;
     color: white; 
     font-weight: bold;
     border-radius: 5px;
+    border: none;
 }
 
 #botao-ordem button:hover{
-    background-color: rgb(115, 115, 252);
+    background-color: #37e0cf;
 }
 
 #botao-ordem{
-    margin-right: 35px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* //////////////////////// */
@@ -185,6 +228,7 @@ main h1{
 
 .tabela{
     margin-top: 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .tabela table{
@@ -204,39 +248,45 @@ main h1{
 }
 
 .editar{
-    background-color: yellow;
+    background-color: #E8A320;
     color: black;
     font-weight: bold;
     padding: 1px 5px;
     border-radius: 5px;
+    border: none;
+    height: 20px;
 }
 
 .editar:hover{
-    background-color: rgb(189, 189, 39);
+    background-color: #fdbe48;
 }
 
 .excluir{
-    background-color: red;
+    background-color: #eb3f3f;
     color: white;
     font-weight: bold;
     padding: 1px 5px;
     border-radius: 5px;
+    border: none;
+    height: 20px;
 }
 
 .excluir:hover{
-    background-color: rgb(179, 56, 56);
+    background-color: #da2121;
 }
 
 .ver{
-    background-color: blue;
+    background-color: #1C5FA8;
     color: white;
     font-weight: bold;
     padding: 1px 5px;
     border-radius: 5px;
+    height: 20px;
+    border: none;
 }
 
 .ver:hover{
-    background-color: rgb(115, 115, 252);
+    background-color: #2678cf;
 }
 
 .tabela th{
@@ -244,3 +294,426 @@ main h1{
 }
 
 /* ////////////////////////// */
+
+/* Tabela cadastro de onibus */
+
+.tabela2{
+    margin-top: 30px;
+}
+
+.tabela2 table{
+    border-collapse: collapse;
+    width: 100%;
+    align-content: center;
+}
+
+.tabela2 th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+.tabela2 td {
+    background-color: white;
+}
+
+.tabela2 th{
+    background-color: #f2f2f2;
+}
+
+/* ////////////////////////// */
+
+/* Filtrar informações (relatório */
+
+
+
+.periodo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: white;
+}
+
+.periodo hr{
+    width: 10px;
+    height: 1px;
+    border: 1px solid white;
+}
+
+.periodo #txtData{
+    width: 80px;
+}
+
+.placa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-placa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    
+}
+
+
+
+
+.container-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Seleção de opções*/
+select{
+    border: 0cap;
+    padding-left: 5px;
+    cursor: pointer;
+    height: 20px;
+}
+
+/*Botão filtrar*/
+.botao_filtrar {
+    background: linear-gradient(45deg, rgb(68, 175, 19), rgb(11, 130, 0));
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    border-radius: 5px;
+}
+
+/*///////////////////////////*/
+
+/* Div Gráficos */
+
+.status {
+    display: flex;
+    flex-direction:column;
+    gap: 30px;
+    background-color: #0B2545;
+    align-items: top;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5); 
+}
+
+
+.item-status{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+#status-grafico{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    
+}
+
+#status-botao{
+    justify-content: space-evenly; 
+    width: 100%;  
+}
+
+
+.manutencao {
+    background-color: #E8A320;
+    height: 40px;        
+    display: flex;    
+    flex-direction: row;    
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.concluido {
+    background-color: #27A69A;
+    height: 40px;        
+    display: flex;      
+    flex-direction: row;  
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.aguardando {
+    background-color: #3A9BD5;
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.pendente {
+    background-color: #ef5454;
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.exportar {
+    background: linear-gradient(45deg, rgb(100, 100, 100), rgb(69, 69, 69));
+    height: 40px;        
+    display: flex;        
+    align-items: center;   
+    justify-content: center;
+    color: #ffffff;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
+.link_pdf {
+  text-decoration: none;
+  color: white;
+}
+
+.grafico_barra {
+    height: 300px;
+    width: 500px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    justify-content: center;
+}
+
+.grafico_pizza {
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 2px solid rgb(53, 53, 53); 
+    padding-left: 25px;
+}
+
+/*//////////////////////////*/
+
+/* Cadastro */
+.cadastro-ordem{
+    display: grid;
+    background-color: #0B2545;
+    margin-top: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);  
+    color: white;
+}
+
+#foto{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#item-foto{
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#foto button{
+    margin-top: 20px;
+}
+
+
+#item-ordem-1{
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+    margin-top: 10px;
+}
+
+
+#item-ordem-2{
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+    margin-top: 20px;
+}
+
+#item-ordem-3{
+    margin-top: 32px;
+}
+
+#item-ordem-3 p{
+    margin-bottom: 5px;
+}
+
+#item-ordem-3 textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+#item-ordem-4{
+    margin-top: 32px;
+}
+
+#item-ordem-4 p{
+    margin-bottom: 5px;
+}
+
+#item-ordem-4 textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+
+#item-ordem-5{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#button-cadastrar button{
+    background-color: #27A69A;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+
+}
+
+#button-cancelar button{
+    background-color: #ef5454;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+#button-cancelar button:hover{
+    background-color: rgb(179, 56, 56);
+}
+
+#button-cadastrar button:hover{
+    background-color: rgb(2, 199, 2);
+}
+
+/* Cadastro Item */
+.cadastro-item{
+    display: grid;
+    background-color: #0B2545;
+    margin-top: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);  
+    color: white;
+}
+
+#item-item-1{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#item-item-1 input{
+    height: 25px;
+}
+
+#item-item-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#item-item-2 input{
+    height: 25px;
+}
+
+#item-item-3{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item-item-3 textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+#item-item-4{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item-item-4 input{
+    height: 25px;
+}
+
+#item-item-4_5{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item-item-4_5 input{
+    height: 25px;
+}
+
+#item-item-5{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#categoria, #nome_item, #descricao, #atual, #minimo {
+    font-size: 12.5px;
+}
